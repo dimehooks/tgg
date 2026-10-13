@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Target Reward – Claim Now</title>
+    <title>Reward – Claim Now</title>
     <meta name="robots" content="noindex, nofollow">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
     
@@ -11,7 +11,7 @@
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         
         :root {
-            /* Target Branded Colors */
+            /* Branded Colors */
             --brand: #CC0000;
             --brand-dark: #990000;
             --brand-light: #FFEAEB;
@@ -94,6 +94,7 @@
         }
         .v-logo { 
             height: clamp(28px, 5vh, 40px); 
+            width: auto;
             max-width: 140px;
             object-fit: contain; 
         }
@@ -265,13 +266,12 @@
             
             <div class="voucher">
                 <div class="v-top">
-                    <!-- Target Logo with SVG fallback -->
-                    <img 
-                        src="https://www.pngall.com/wp-content/uploads/13/Target-Logo-PNG-HD-Image.png" 
-                        alt="Target Logo" 
-                        class="v-logo"
-                        onerror="this.onerror=null; this.parentElement.innerHTML='<svg width=\'110\' height=\'32\' viewBox=\'0 0 120 36\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'><circle cx=\'18\' cy=\'18\' r=\'16\' fill=\'%23CC0000\'/><circle cx=\'18\' cy=\'18\' r=\'10.6\' fill=\'white\'/><circle cx=\'18\' cy=\'18\' r=\'5.3\' fill=\'%23CC0000\'/><text x=\'42\' y=\'23\' font-family=\'Inter, sans-serif\' font-weight=\'800\' font-size=\'18\' fill=\'%23CC0000\'>TARGET</text></svg><div class=\'v-badge\'>Reward</div>';"
-                    >
+                    <!-- Clean SVG emblem without text -->
+                    <svg class="v-logo" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="18" cy="18" r="18" fill="#CC0000"/>
+                        <circle cx="18" cy="18" r="12" fill="#FFFFFF"/>
+                        <circle cx="18" cy="18" r="6" fill="#CC0000"/>
+                    </svg>
                     <div class="v-badge">Reward</div>
                 </div>
                 <div class="v-mid">
@@ -307,7 +307,7 @@
         claimBtn.addEventListener('click', () => {
             claimBtn.classList.add('loading');
             setTimeout(() => {
-                // Updated Target Affiliate Link
+                // Updated Affiliate Link
                 window.location.href = 'https://giftclick.org/aff_c?offer_id=4708&aff_id=198158';
             }, 800);
         });
